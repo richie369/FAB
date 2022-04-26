@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    LEAD
+  </a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <!-- <div class="collapse navbar-collapse"
+         [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Item 1</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="#">Item 2</a>
+        </li>
+      </ul>
+    </div> -->
+</nav>
+<div class="mobile-list" [ngClass]="{ 'navbaropen': navbarOpen }" *ngIf="navbarOpen">
+  <div class="icon-container">
+    <mat-icon (click)="navbarOpen = !navbarOpen" aria-hidden="false" aria-label="Example home icon">close</mat-icon>
+  </div>
+  <div class="links-container">
+    <div>
+      <div class="link">About </div>
+      <div class="link">Courses </div>
+      <div class="link">Facilities</div>
+    </div>
+  </div>
+</div>

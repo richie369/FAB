@@ -1,0 +1,82 @@
+.main {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+        url("/assets/classroom.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .content {
+        display: flex;
+
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        line-height: unset;
+        .content-container {
+            color: white;
+            text-align: center;
+            .title {
+                font-size: 48px;
+                font-family: "Rubik", sans-serif;
+                font-weight: bold;
+            }
+            .sub-title {
+                font-size: 24px;
+            }
+            button {
+                background: crimson;
+                width: 200px;
+                font-size: 18px;
+                height: 50px;
+                border-radius: 25px;
+                margin: 30px 0px;
+            }
+            .phno {
+                font-size: 20px;
+            }
+        }
+    }
+}
+.section-2 {
+    // background-color: #f5f5f5;
+    .title {
+        font-size: 48px;
+        color: crimson;
+        font-family: "Rubik", sans-serif;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .services-card {
+            background-color: #f5f5f5;
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.section-3 {
+    background: #f5f5f5;
+    .title {
+        font-size: 48px;
+        color: crimson;
+        font-family: "Rubik", sans-serif;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .about-container {
+        max-width: 600px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+}

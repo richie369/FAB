@@ -1,0 +1,45 @@
+.navbar {
+    padding: 20px;
+    background-color: transparent !important;
+    position: relative;
+    .navbar-toggler {
+        display: none;
+    }
+    @media only screen and (max-width: 700px) {
+        /* styles for mobile browsers smaller than 480px; (iPhone) */
+        .navbar-toggler {
+            display: block;
+        }
+     }
+}
+.mobile-list {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: black;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    .icon-container {
+        padding: 20px;
+        float: right;
+        color: white;
+        width: 100%;
+        mat-icon {
+            font-size: 48px;
+            height: 48px;
+            width: 48px;
+            float: right;
+            cursor: pointer;
+        }
+    }
+    .links-container {
+        padding: 20px;
+        color: white;
+        .link {
+            padding:15px;
+            border-bottom: 1px solid grey;
+            cursor: pointer;
+        }
+    }
+}
