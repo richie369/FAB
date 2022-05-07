@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RegistrationService } from './registration.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Fab-Institue';
+  title = 'Lead-Academy';
   services = [{
     name: 'Our Service',
     image: '/assets/study.jpg',
@@ -37,4 +38,13 @@ export class AppComponent {
     image: '/assets/study.jpg',
     description: 'The Indian Certificate of Secondary Education (ICSE) is an examination conducted by the Council for the Indian School Certificate Examination.'
   }]
+  constructor(public registrationService: RegistrationService) {
+
+  }
+  submit() {
+    this.registrationService.addItem({
+      name: 'meghana',
+      address: "bangalore"
+    })
+  }
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Fab-Institue": {
+    "Lead-Academy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fab-institue",
+            "outputPath": "dist/lead-academy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -41,8 +41,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Fab-Institue:build:production"
+              "browserTarget": "Lead-Academy:build:production"
             },
             "development": {
-              "browserTarget": "Fab-Institue:build:development"
+              "browserTarget": "Lead-Academy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Fab-Institue:build"
+            "browserTarget": "Lead-Academy:build"
           }
         },
         "test": {
@@ -109,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "Fab-Institue"
+  "defaultProject": "Lead-Academy"
 }

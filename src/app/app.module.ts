@@ -12,7 +12,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { CoursesComponent } from './courses/courses.component';
 import {MatIconModule} from '@angular/material/icon';
-
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,9 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -28,7 +34,7 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     CommonModule,MatButtonModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
