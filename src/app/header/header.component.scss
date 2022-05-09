@@ -12,6 +12,27 @@
         }
      }
 }
+.action {
+    color: white;
+    padding: 0 20px ;
+    cursor: pointer;
+}
+
+
+.action:hover {
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-content {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-display {
+    display: flex
+}
 .mobile-list {
     height: 100%;
     position: absolute;
@@ -43,3 +64,15 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 700px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .action-buttons{
+        display: none;
+    }
+
+    .nav-content{
+        width: auto;
+    }
+ }

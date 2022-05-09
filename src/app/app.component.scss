@@ -50,6 +50,15 @@
         }
     }
 }
+
+.contact-container {
+    padding: 50px 0;
+    background: #f5f5f5;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 .section-3 {
     padding: 50px 0;
     background: #f5f5f5;
@@ -89,20 +98,26 @@
 
     .teacher-image {
         background-image: url(/assets/teacher.jpg);
+        margin-bottom: 30px;
     }
 
     .excellence-image {
         background-image: url(/assets/excellence.jpg);
+        margin-bottom: 30px;
     }
 
     .curricullum-image {
         background-image: url(/assets/curriculum.jpg);
+        margin-bottom: 30px;
         background-position: 50%;
     }
     .left-container {
         display: flex;
         align-items: center;
         text-align: left;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        justify-content: center;
 
         .image-content {
             max-width: 600px;
@@ -111,9 +126,13 @@
     }
 
     .right-container {
-        text-align: right;
+        text-align: left;
         display: flex;
         align-items: center;
+        justify-content: center;
+
+        flex-wrap: wrap-reverse;
+      
         .image-content {
             max-width: 600px;
             margin-right: 30px;
@@ -152,6 +171,85 @@
     }
 }
 
+.navbar {
+    padding: 20px;
+    background-color: transparent !important;
+    position: relative;
+    .navbar-toggler {
+        display: none;
+    }
+    @media only screen and (max-width: 700px) {
+        /* styles for mobile browsers smaller than 480px; (iPhone) */
+        .navbar-toggler {
+            display: block;
+        }
+     }
+}
+.action {
+    color: white;
+    padding: 0 20px ;
+    cursor: pointer;
+}
+
+
+.action:hover {
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-content {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-display {
+    display: flex
+}
+.mobile-list {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: black;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    .icon-container {
+        padding: 20px;
+        float: right;
+        color: white;
+        width: 100%;
+        mat-icon {
+            font-size: 48px;
+            height: 48px;
+            width: 48px;
+            float: right;
+            cursor: pointer;
+        }
+    }
+    .links-container {
+        padding: 20px;
+        color: white;
+        .link {
+            padding:15px;
+            border-bottom: 1px solid grey;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .action-buttons{
+        display: none;
+    }
+
+    .nav-content{
+        width: auto;
+    }
+ }
+
 @media only screen and (max-width: 600px) {
     .title {
         font-size: 40px;
@@ -167,5 +265,11 @@
 
     .font-sec {
         font-size: 24px;
+    }
+    .left-container {
+        text-align: center;
+    }
+    .right-container{
+        text-align: center;
     }
 }

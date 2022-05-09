@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormGroupDirective, NgForm, Validators, FormBuilder } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { RegistrationService } from '../registration.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -33,11 +34,20 @@ export class IsceRegistrationComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor(private fb: FormBuilder, private registrationService: RegistrationService) {
+  constructor(private fb: FormBuilder, private registrationService: RegistrationService, private _snackBar: MatSnackBar) {
+  }
+
+  openSnackBar() {
+    this._snackBar.open('You have been Registered Successfully! Please wait for a callback from us', '', { duration: 5000 })
   }
 
   saveStudent() {
-    this.registrationService.addItem(this.studentForm.value);
+    this.registrationService.addItem(this.studentForm.value).then(res => {
+      this.openSnackBar();
+      this.studentForm.reset();
+    }).catch(e => {
+      console.log(e);
+    });
   }
 
   ngOnInit(): void {
@@ -68,3 +78,4 @@ export class IsceRegistrationComponent implements OnInit {
   }
 
 }
+

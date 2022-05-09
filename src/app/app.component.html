@@ -1,6 +1,40 @@
 <div>
   <div class="main">
-    <app-header></app-header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class=nav-content>
+        <div>
+          <a class="navbar-brand" href="#">
+            <b>LEAD</b>
+          </a>
+        </div>
+
+        <div class="flex-display action-buttons">
+          <div class="action" (click)="scroll(register, false)">Register</div>
+          <div class="action" (click)="scroll(about, false)">About Us</div>
+          <div class="action" (click)="scroll(contact, false)">Contact Us</div>
+        </div>
+
+      </div>
+
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </nav>
+    <div class="mobile-list" [ngClass]="{ 'navbaropen': navbarOpen }" *ngIf="navbarOpen">
+      <div class="icon-container">
+        <mat-icon (click)="navbarOpen = !navbarOpen" aria-hidden="false" aria-label="Example home icon">close</mat-icon>
+      </div>
+      <div class="links-container">
+        <div>
+          <div class="link" (click)="scroll(register, true)">Register </div>
+          <div class="link" (click)="scroll(about, true)">About Us </div>
+          <div class="link" (click)="scroll(contact, true)">Contact Us</div>
+        </div>
+      </div>
+    </div>
+
     <div class="content">
       <div class="container content-container">
         <div class="title">LEAD ACADEMY</div>
@@ -8,16 +42,16 @@
         <div class="sub-title font-sec">One Stop Solution For Complete Education Solutions</div><br>
         <div class="sub-title">Coaching Center for 8<sup>th</sup>, 9<sup>th</sup> and 10<sup>th</sup> </div>
         <div class="sub-title"> Integrated PUC course for Science and Commerce </div>
-        <button mat-stroked-button>Contact Us</button>
+        <button mat-stroked-button (click)="scroll(contact, false)">Contact Us</button>
         <div class="phno">+91 8197207462 | 9916404185</div>
       </div>
     </div>
   </div>
   <app-courses></app-courses>
 
-  <div class="section-3">
+  <div #about class="section-3">
     <div class="container">
-      <div class="title"> <span>About Us</span>
+      <div class="title"> <span>Why Choose Us</span>
       </div>
 
       <div class="about-us">
@@ -28,10 +62,19 @@
             <div class="image-content">
               <h2>Dedicated Educators</h2>
               <div>
-                We know that learning is easier when you have an excellent teacher. That's why most of our educators
-                have
-                achieved an advanced degree in their field. Our faculty are passionate about the subjects they teach and
-                bring this enthusiasm into their lessons.
+                <ul>
+                  <li> Well qualified and dedicated staff members from reputed school such as Bishop Cottons, St
+                    Josephs,
+                    Baldwin's etc.<br></li>
+                  <li> We know that learning is easier when you have an excellent teacher. That's why most of our
+                    educators
+                    have
+                    achieved an advanced degree in their field.</li>
+                  <li> Our faculty are passionate about the subjects they teach and
+                    bring this enthusiasm into their lessons.</li>
+                </ul>
+
+
               </div>
             </div>
           </div>
@@ -42,8 +85,28 @@
             <div class="image-content">
               <h2>Commitment to Excellence</h2>
               <div>
-                Our mission is to embrace the pursuit of excellence both inside and outside the classroom. We encourage
-                critical thinking and emphasize the learning process over rote memorization.
+                <ul>
+                  <li>
+                    Our <b>Vision</b> is to become an educational set up that works towards the overall development of
+                    its
+                    students by strengthening brightest and young minds to achieve and fly high so as to achoved the
+                    best in
+                    their lives.
+                  </li>
+                  <li>
+                    Our <b>mission</b> is to embrace the pursuit of excellence both inside and outside the classroom. We
+                    encourage critical thinking and emphasize the learning process over rote memorization.
+                  </li>
+                  <li>
+                    At <b>Lead Academy</b> we nuture the students to explore their full potential so as to boost their
+                    self
+                    confidence and moral in order to realise their dreams by advanced teaching methodology.
+
+                  </li>
+                </ul>
+
+
+
               </div>
             </div>
             <div class="image-container excellence-image">
@@ -56,11 +119,26 @@
             <div class="image-container curricullum-image">
             </div>
             <div class="image-content">
-              <h2>First-Rate Curriculum</h2>
+              <h2>First-Rate Curriculum and Infrastructure</h2>
               <div>
-                Are you a beginner, expert, or somewhere in between? Not to worry! We offer a variety of high-quality
-                ICSE
-                coaching designed to prepare you for your next step.
+                <ul>
+                  <li>Are you a beginner, expert, or somewhere in between? Not to worry! We offer a variety of
+                    high-quality
+                    ICSE
+                    coaching designed to prepare you for your next step.<br></li>
+                  <li>
+                    Provides effective and complete study materials which helps the students to learn with ease.
+                  </li>
+                  <li>
+                    Online tests will be conducted in addition to offline pen and paper tests and practice tests.
+                  </li>
+                  <li>
+                    Spacious, well ventilated class rooms with comfortable furniture make learning an enlightening
+                    activity.
+                  </li>
+                </ul>
+
+
               </div>
             </div>
           </div>
@@ -70,7 +148,30 @@
     </div>
   </div>
 
-  <app-isce-registration></app-isce-registration>
+  <div #register>
+    <app-isce-registration></app-isce-registration>
+  </div>
+
+  <div #contact class="contact-container section-2">
+    <div class="container" style="text-align: center;">
+      <div class="title"> <span>Contact Us</span></div>
+
+
+      <h4> Please get in touch with us for more information <br></h4>
+      <i class="fa fa-phone"></i> Call us on <b style="color: crimson;">+91 8197207462 | 9916404185</b>
+      <br>
+      <br>
+      <i class="fa fa-map"></i> #8, Residency Road, Corporation building, <br>
+      First Floor above the Shiv Sagar Express Restaurant,
+      Bangalore - 560025
+
+      <br>
+      <br>
+      <b> Branches - Indiranagar and Residency Road </b>
+    </div>
+
+  </div>
+
 </div>
 
 <!-- <router-outlet></router-outlet> -->

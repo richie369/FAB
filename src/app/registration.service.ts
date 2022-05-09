@@ -10,7 +10,6 @@ export class RegistrationService {
   }
 
   addItem(item: any) {
-    console.log(item);
-    this.registration.add(item);
+   return this.registration.add(item);
   }
 }

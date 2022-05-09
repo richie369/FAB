@@ -7,6 +7,7 @@ import { RegistrationService } from './registration.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  navbarOpen = false;
   title = 'Lead-Academy';
   services = [{
     name: 'Our Service',
@@ -46,5 +47,15 @@ export class AppComponent {
       name: 'meghana',
       address: "bangalore"
     })
+  }
+
+  scroll(el: HTMLElement, toggle?: boolean) {
+    el.scrollIntoView();
+    if (toggle)
+      this.navbarOpen = !this.navbarOpen;
+  }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 }
