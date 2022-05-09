@@ -2,31 +2,19 @@
   <div class="main">
     <app-header></app-header>
     <div class="content">
-      <div class="content-container">
+      <div class="container content-container">
         <div class="title">LEAD ACADEMY</div>
-        <div class="sub-title">One Stop Solution For Complete Education Solutions</div>
-        <button (click)="submit()" mat-stroked-button>Contact Us</button>
-        <div class="phno">+91 9916404185 | 7795652826</div>
+        <br><br>
+        <div class="sub-title font-sec">One Stop Solution For Complete Education Solutions</div><br>
+        <div class="sub-title">Coaching Center for 8<sup>th</sup>, 9<sup>th</sup> and 10<sup>th</sup> </div>
+        <div class="sub-title"> Integrated PUC course for Science and Commerce </div>
+        <button mat-stroked-button>Contact Us</button>
+        <div class="phno">+91 8197207462 | 9916404185</div>
       </div>
     </div>
   </div>
   <app-courses></app-courses>
-  <div class="section-2 container">
-    <div class="title"> FAB Coaching Classes</div>
-    <div class="services">
-      <mat-card class="services-card" *ngFor="let service of services">
-        <mat-card-header>
-          <mat-card-title>{{service.name}}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image [src]="service.image" alt="">
-        <mat-card-content>
-          <p>
-            {{service.description}}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
+
   <div class="section-3">
     <div class="container">
       <div class="title"> <span>About Us</span>
@@ -34,29 +22,55 @@
 
       <div class="about-us">
         <div class="about-container">
-          <h2>Dedicated Educators</h2>
-          <div>
-            We know that learning is easier when you have an excellent teacher. That's why most of our educators have
-            achieved an advanced degree in their field. Our faculty are passionate about the subjects they teach and
-            bring this enthusiasm into their lessons.
+          <div class="left-container">
+            <div class="image-container teacher-image">
+            </div>
+            <div class="image-content">
+              <h2>Dedicated Educators</h2>
+              <div>
+                We know that learning is easier when you have an excellent teacher. That's why most of our educators
+                have
+                achieved an advanced degree in their field. Our faculty are passionate about the subjects they teach and
+                bring this enthusiasm into their lessons.
+              </div>
+            </div>
           </div>
+
         </div>
         <div class="about-container">
-          <h2>Commitment to Excellence</h2>
-          <div>
-            Our mission is to embrace the pursuit of excellence both inside and outside the classroom. We encourage critical thinking and emphasize the learning process over rote memorization. 
+          <div class="right-container">
+            <div class="image-content">
+              <h2>Commitment to Excellence</h2>
+              <div>
+                Our mission is to embrace the pursuit of excellence both inside and outside the classroom. We encourage
+                critical thinking and emphasize the learning process over rote memorization.
+              </div>
+            </div>
+            <div class="image-container excellence-image">
+            </div>
           </div>
         </div>
+
         <div class="about-container">
-          <h2>First-Rate Curriculum</h2>
-          <div>
-            Are you a beginner, expert, or somewhere in between? Not to worry! We offer a variety of high-quality ICSE coaching designed to prepare you for your next step. 
+          <div class="left-container">
+            <div class="image-container curricullum-image">
+            </div>
+            <div class="image-content">
+              <h2>First-Rate Curriculum</h2>
+              <div>
+                Are you a beginner, expert, or somewhere in between? Not to worry! We offer a variety of high-quality
+                ICSE
+                coaching designed to prepare you for your next step.
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
+
+  <app-isce-registration></app-isce-registration>
 </div>
 
 <!-- <router-outlet></router-outlet> -->
